@@ -5,7 +5,7 @@ public class Money {
 	private final String currency;
 
 	public Money(int amount, String currency) {
-		this.amount = amount + 10;
+		this.amount = amount;
 		this.currency = currency;
 	}
 
