@@ -9,7 +9,7 @@ import static org.junit.Assert.assertTrue;
 
 public class CarMock {
 	
-	private Car myCar = mock(Car.class);
+	private Car myCar = org.mockito.Mockito.mock(Car.class);
 	
 	@Test
 	public void testCarInstance() {

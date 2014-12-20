@@ -7,12 +7,8 @@ import junitparams.JUnitParamsRunner;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-@RunWith(JUnitParamsRunner.class)
+@RunWith(junitparams.JUnitParamsRunner.class)
 public class MoneyTestParametrized {
-	
-	public MoneyTestParametrized() {
-		System.out.println("constructor ..");
-	}
 	
 	private static final Object[] getMoney() {
 		return new Object[] { new Object[] { 10, "USD" },
@@ -20,7 +16,7 @@ public class MoneyTestParametrized {
 	}
 
 	@Test
-	@Parameters(method = "getMoney")
+	@junitparams.Parameters(method = "getMoney")
 	public void checkConstructor(int amount, String currency) {
 		Money money = new Money(amount, currency);
 		assertEquals(amount, money.getAmount());
